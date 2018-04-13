@@ -2,6 +2,8 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
+import { ErrorComponent } from './error/error.component';
+import { ProductsListComponent } from './products-list/products-list.component';
 
 const appRoutes: Routes = [
     {
@@ -13,8 +15,12 @@ const appRoutes: Routes = [
         component: HomeComponent
     },
     {
+        path: 'products',
+        component: ProductsListComponent
+    },
+    {
         path: '**',
-        component: HomeComponent
+        component: ErrorComponent
     }
 ];
 

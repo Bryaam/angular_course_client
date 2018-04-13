@@ -1,0 +1,11 @@
+<h2>{{ title }}</h2>
+<hr>
+<div *ngIf="products">
+  <ul>
+    <li *ngFor="let product of products">
+      {{ product.name }}, {{ product.price }}, {{ product.description }}
+      <br>
+      <img src="{{ product.image_url }}" alt="">
+    </li>
+  </ul>
+</div>
